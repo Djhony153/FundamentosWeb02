@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 30px;
+}
+
+ul {
+    width: 70%;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
 .header-botton {
     display: flex ;
     justify-content: space-between;
@@ -22,10 +36,34 @@
     align-items: center;
 }
 
-#git, #link, #insta {
+#phone img {
+float: left;
+}
+
+#git, #link, #insta, #phone {
     transition: 0.5s;
 }
 
-#git:hover, #link:hover, #insta:hover{
+#git:hover, #link:hover, #insta:hover, #phone:hover{
     scale: 1.1;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+/* Responsividade */
+
+@media(max-width: 768px) {
+    section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 520px) {
+    section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
